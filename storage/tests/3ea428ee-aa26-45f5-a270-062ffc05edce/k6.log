@@ -1,0 +1,96 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /home/user/Desktop/simple load testing/backend/storage/tests/3ea428ee-aa26-45f5-a270-062ffc05edce/script.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 10 max VUs, 40s max duration (incl. graceful stop):
+              * default: 10 looping VUs for 10s (gracefulStop: 30s)
+
+
+running (01.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [  10% ] 10 VUs  01.0s/10s
+
+running (02.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [  20% ] 10 VUs  02.0s/10s
+
+running (03.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [  30% ] 10 VUs  03.0s/10s
+
+running (04.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [  40% ] 10 VUs  04.0s/10s
+
+running (05.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [  50% ] 10 VUs  05.0s/10s
+
+running (06.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [  60% ] 10 VUs  06.0s/10s
+
+running (07.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [  70% ] 10 VUs  07.0s/10s
+
+running (08.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [  80% ] 10 VUs  08.0s/10s
+
+running (09.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [  90% ] 10 VUs  09.0s/10s
+
+running (10.0s), 10/10 VUs, 0 complete and 0 interrupted iterations
+default   [ 100% ] 10 VUs  10.0s/10s
+
+running (11.0s), 09/10 VUs, 1 complete and 0 interrupted iterations
+default ↓ [ 100% ] 10 VUs  10s
+
+running (12.0s), 08/10 VUs, 2 complete and 0 interrupted iterations
+default ↓ [ 100% ] 10 VUs  10s
+
+running (13.0s), 05/10 VUs, 5 complete and 0 interrupted iterations
+default ↓ [ 100% ] 10 VUs  10s
+
+running (14.0s), 02/10 VUs, 8 complete and 0 interrupted iterations
+default ↓ [ 100% ] 10 VUs  10s
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 50     3.510038/s
+    checks_succeeded...: 80.00% 40 out of 50
+    checks_failed......: 20.00% 10 out of 50
+
+    ✗ status ok
+      ↳  80% — ✓ 40 / ✗ 10
+
+    CUSTOM
+    api_data_received..............: 26535  1862.777023/s
+    api_data_sent..................: 1702   119.481684/s
+    api_errors.....................: 10     0.702008/s
+    api_req_duration...............: avg=204.16ms min=5.14ms med=10.09ms max=1.03s    p(90)=713.34ms p(95)=798.58ms
+    api_reqs.......................: 50     3.510038/s
+
+    HTTP
+    http_req_duration..............: avg=204.16ms min=5.14ms med=10.09ms max=1.03s    p(90)=713.34ms p(95)=798.58ms
+      { expected_response:true }...: avg=87.02ms  min=5.14ms med=9.04ms  max=362.08ms p(90)=330.84ms p(95)=355.91ms
+    http_req_failed................: 20.00% 10 out of 50
+    http_reqs......................: 50     3.510038/s
+
+    EXECUTION
+    iteration_duration.............: avg=12.87s   min=10.65s med=13.11s  max=14.24s   p(90)=14.04s   p(95)=14.14s  
+    iterations.....................: 10     0.702008/s
+    vus............................: 2      min=2         max=10
+    vus_max........................: 10     min=10        max=10
+
+    NETWORK
+    data_received..................: 41 kB  2.9 kB/s
+    data_sent......................: 15 kB  1.1 kB/s
+
+
+
+
+running (14.2s), 00/10 VUs, 10 complete and 0 interrupted iterations
+default ✓ [ 100% ] 10 VUs  10s

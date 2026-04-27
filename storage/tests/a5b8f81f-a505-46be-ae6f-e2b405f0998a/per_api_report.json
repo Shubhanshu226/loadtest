@@ -1,0 +1,79 @@
+{
+  "rows": [
+    {
+      "api": "Auth :: Register (optional per iteration)",
+      "count": 3004,
+      "errorCount": 3004,
+      "errorPct": 100,
+      "avgMs": 0,
+      "minMs": 0,
+      "p50Ms": 0,
+      "p90Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "rps": 100.13333333333334,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 7299.033333333334
+    },
+    {
+      "api": "Auth :: Login (sets accessToken)",
+      "count": 3004,
+      "errorCount": 3004,
+      "errorPct": 100,
+      "avgMs": 0,
+      "minMs": 0,
+      "p50Ms": 0,
+      "p90Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "rps": 100.13333333333334,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 7299.033333333334
+    },
+    {
+      "api": "Tasks :: List",
+      "count": 3004,
+      "errorCount": 3004,
+      "errorPct": 100,
+      "avgMs": 0,
+      "minMs": 0,
+      "p50Ms": 0,
+      "p90Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "rps": 100.13333333333334,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 0
+    },
+    {
+      "api": "Tasks :: Create (sets taskId)",
+      "count": 3004,
+      "errorCount": 3004,
+      "errorPct": 100,
+      "avgMs": 0,
+      "minMs": 0,
+      "p50Ms": 0,
+      "p90Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "rps": 100.13333333333334,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 2803.733333333333
+    },
+    {
+      "api": "Tasks :: Toggle Done",
+      "count": 3004,
+      "errorCount": 3004,
+      "errorPct": 100,
+      "avgMs": 0,
+      "minMs": 0,
+      "p50Ms": 0,
+      "p90Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "rps": 100.13333333333334,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 0
+    }
+  ]
+}

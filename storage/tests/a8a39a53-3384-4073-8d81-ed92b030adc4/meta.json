@@ -1,0 +1,22 @@
+{
+  "id": "a8a39a53-3384-4073-8d81-ed92b030adc4",
+  "status": "created",
+  "createdAt": "2026-04-27T10:36:10.230Z",
+  "vus": 1000,
+  "duration": "30s",
+  "collectionName": "Auth MS - Account Resolver",
+  "config": {
+    "extractions": [
+      {
+        "match": "/Auth :: Login/i",
+        "jsonPath": "$.accessToken",
+        "var": "accessToken"
+      },
+      {
+        "match": "/Tasks :: Create/i",
+        "jsonPath": "$._id",
+        "var": "taskId"
+      }
+    ]
+  }
+}

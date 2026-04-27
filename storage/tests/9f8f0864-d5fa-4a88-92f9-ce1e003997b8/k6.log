@@ -1,0 +1,95 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /home/user/Desktop/simple load testing/backend/storage/tests/9f8f0864-d5fa-4a88-92f9-ce1e003997b8/script.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 5 max VUs, 40s max duration (incl. graceful stop):
+              * default: 5 looping VUs for 10s (gracefulStop: 30s)
+
+
+running (01.0s), 5/5 VUs, 0 complete and 0 interrupted iterations
+default   [  10% ] 5 VUs  01.0s/10s
+
+running (02.0s), 5/5 VUs, 0 complete and 0 interrupted iterations
+default   [  20% ] 5 VUs  02.0s/10s
+
+running (03.0s), 5/5 VUs, 0 complete and 0 interrupted iterations
+default   [  30% ] 5 VUs  03.0s/10s
+
+running (04.0s), 5/5 VUs, 0 complete and 0 interrupted iterations
+default   [  40% ] 5 VUs  04.0s/10s
+
+running (05.0s), 5/5 VUs, 0 complete and 0 interrupted iterations
+default   [  50% ] 5 VUs  05.0s/10s
+
+running (06.0s), 5/5 VUs, 0 complete and 0 interrupted iterations
+default   [  60% ] 5 VUs  06.0s/10s
+
+running (07.0s), 5/5 VUs, 0 complete and 0 interrupted iterations
+default   [  70% ] 5 VUs  07.0s/10s
+
+running (08.0s), 5/5 VUs, 0 complete and 0 interrupted iterations
+default   [  80% ] 5 VUs  08.0s/10s
+
+running (09.0s), 5/5 VUs, 0 complete and 0 interrupted iterations
+default   [  90% ] 5 VUs  09.0s/10s
+
+running (10.0s), 5/5 VUs, 0 complete and 0 interrupted iterations
+default   [ 100% ] 5 VUs  10.0s/10s
+
+running (11.0s), 5/5 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 5 VUs  10s
+
+running (12.0s), 5/5 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 5 VUs  10s
+
+running (13.0s), 5/5 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 5 VUs  10s
+
+running (14.0s), 4/5 VUs, 1 complete and 0 interrupted iterations
+default ↓ [ 100% ] 5 VUs  10s
+
+running (15.0s), 2/5 VUs, 3 complete and 0 interrupted iterations
+default ↓ [ 100% ] 5 VUs  10s
+
+running (16.0s), 2/5 VUs, 3 complete and 0 interrupted iterations
+default ↓ [ 100% ] 5 VUs  10s
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 30     1.845925/s
+    checks_succeeded...: 16.66% 5 out of 30
+    checks_failed......: 83.33% 25 out of 30
+
+    ✗ status ok
+      ↳  16% — ✓ 5 / ✗ 25
+
+    HTTP
+    http_req_duration..............: avg=2.23ms min=670.27µs med=1.51ms max=6.67ms p(90)=4.31ms p(95)=5.6ms 
+      { expected_response:true }...: avg=5.09ms min=3.48ms   med=4.86ms max=6.67ms p(90)=6.49ms p(95)=6.58ms
+    http_req_failed................: 83.33% 25 out of 30
+    http_reqs......................: 30     1.845925/s
+
+    EXECUTION
+    iteration_duration.............: avg=15s    min=13.5s    med=14.7s  max=16.25s p(90)=16.21s p(95)=16.23s
+    iterations.....................: 5      0.307654/s
+    vus............................: 2      min=2        max=5
+    vus_max........................: 5      min=5        max=5
+
+    NETWORK
+    data_received..................: 7.5 kB 464 B/s
+    data_sent......................: 4.6 kB 280 B/s
+
+
+
+
+running (16.3s), 0/5 VUs, 5 complete and 0 interrupted iterations
+default ✓ [ 100% ] 5 VUs  10s

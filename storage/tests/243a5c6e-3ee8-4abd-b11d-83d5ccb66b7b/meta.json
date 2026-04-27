@@ -1,0 +1,176 @@
+{
+  "id": "243a5c6e-3ee8-4abd-b11d-83d5ccb66b7b",
+  "status": "completed",
+  "createdAt": "2026-04-24T09:42:38.282Z",
+  "vus": 10,
+  "duration": "10s",
+  "collectionName": "Todo App (NestJS) - Load Test Flow",
+  "config": {
+    "extractions": [
+      {
+        "match": "/Auth :: Login/i",
+        "jsonPath": "$.accessToken",
+        "var": "accessToken"
+      },
+      {
+        "match": "/Tasks :: Create/i",
+        "jsonPath": "$._id",
+        "var": "taskId"
+      }
+    ]
+  },
+  "startedAt": "2026-04-24T09:42:40.437Z",
+  "k6Summary": {
+    "root_group": {
+      "name": "",
+      "path": "",
+      "id": "d41d8cd98f00b204e9800998ecf8427e",
+      "groups": {},
+      "checks": {
+        "status ok": {
+          "path": "::status ok",
+          "id": "017d7c5e080cbf543220d509d2bfff42",
+          "passes": 40,
+          "fails": 10,
+          "name": "status ok"
+        }
+      }
+    },
+    "metrics": {
+      "checks": {
+        "passes": 40,
+        "fails": 10,
+        "value": 0.8
+      },
+      "http_req_waiting": {
+        "p(90)": 1049.6700839000002,
+        "p(95)": 1125.8024703,
+        "avg": 280.6768133400001,
+        "min": 4.801304,
+        "med": 10.240976,
+        "max": 1544.110371
+      },
+      "api_errors": {
+        "rate": 0.7050512166357661,
+        "count": 10
+      },
+      "iteration_duration": {
+        "min": 10479.26784,
+        "med": 12863.750481,
+        "max": 14183.020709,
+        "p(90)": 13696.3707569,
+        "p(95)": 13939.69573295,
+        "avg": 12690.199371800001
+      },
+      "api_reqs": {
+        "count": 50,
+        "rate": 3.52525608317883
+      },
+      "vus": {
+        "value": 1,
+        "min": 1,
+        "max": 10
+      },
+      "http_req_duration{expected_response:true}": {
+        "avg": 112.81995775,
+        "min": 4.917362,
+        "med": 9.223129,
+        "max": 454.872101,
+        "p(90)": 437.7214409,
+        "p(95)": 451.44599804999996
+      },
+      "http_reqs": {
+        "count": 50,
+        "rate": 3.52525608317883
+      },
+      "api_req_duration": {
+        "avg": 280.9533758399999,
+        "min": 4.917362,
+        "med": 10.414634,
+        "max": 1544.297753,
+        "p(90)": 1050.0317413,
+        "p(95)": 1126.3545152
+      },
+      "data_sent": {
+        "count": 14975,
+        "rate": 1055.8141969120597
+      },
+      "http_req_blocked": {
+        "p(95)": 0.6648061499999999,
+        "avg": 0.11988404000000001,
+        "min": 0.00761,
+        "med": 0.0160265,
+        "max": 0.806175,
+        "p(90)": 0.6145197000000001
+      },
+      "http_req_connecting": {
+        "avg": 0.06083124000000001,
+        "min": 0,
+        "med": 0,
+        "max": 0.455246,
+        "p(90)": 0.2669883000000001,
+        "p(95)": 0.4249232
+      },
+      "http_req_receiving": {
+        "avg": 0.13303966000000003,
+        "min": 0.065196,
+        "med": 0.116577,
+        "max": 0.533987,
+        "p(90)": 0.1756087,
+        "p(95)": 0.20456504999999992
+      },
+      "api_data_received": {
+        "count": 30375,
+        "rate": 2141.5930705311393
+      },
+      "iterations": {
+        "count": 10,
+        "rate": 0.7050512166357661
+      },
+      "http_req_duration": {
+        "p(95)": 1126.3545152,
+        "avg": 280.9533758399999,
+        "min": 4.917362,
+        "med": 10.414634,
+        "max": 1544.297753,
+        "p(90)": 1050.0317413
+      },
+      "http_req_tls_handshaking": {
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "max": 0,
+        "p(90)": 0,
+        "p(95)": 0
+      },
+      "vus_max": {
+        "min": 10,
+        "max": 10,
+        "value": 10
+      },
+      "data_received": {
+        "rate": 3175.9032053358083,
+        "count": 45045
+      },
+      "http_req_failed": {
+        "passes": 10,
+        "fails": 40,
+        "value": 0.2
+      },
+      "api_data_sent": {
+        "count": 1702,
+        "rate": 119.99971707140739
+      },
+      "http_req_sending": {
+        "p(90)": 0.26321480000000075,
+        "p(95)": 0.8198132499999997,
+        "avg": 0.14352283999999998,
+        "min": 0.024527,
+        "med": 0.059164,
+        "max": 0.925107
+      }
+    }
+  },
+  "perRequestReport": [],
+  "finishedAt": "2026-04-24T09:42:55.253Z"
+}

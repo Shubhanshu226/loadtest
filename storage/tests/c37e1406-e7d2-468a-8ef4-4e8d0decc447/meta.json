@@ -1,0 +1,9 @@
+{
+  "id": "c37e1406-e7d2-468a-8ef4-4e8d0decc447",
+  "status": "running",
+  "createdAt": "2026-04-23T12:42:31.952Z",
+  "vus": 1000,
+  "duration": "30s",
+  "collectionName": "Example Target API (Todo App + Utilities)",
+  "startedAt": "2026-04-23T12:42:33.384Z"
+}

@@ -1,0 +1,201 @@
+{
+  "id": "9ed68492-9b70-419e-98e9-d3ed91d44c56",
+  "status": "completed",
+  "createdAt": "2026-04-27T10:36:23.165Z",
+  "vus": 1000,
+  "duration": "30s",
+  "collectionName": "Auth MS - Account Resolver",
+  "config": {
+    "extractions": [
+      {
+        "match": "/Auth :: Login/i",
+        "jsonPath": "$.accessToken",
+        "var": "accessToken"
+      },
+      {
+        "match": "/Tasks :: Create/i",
+        "jsonPath": "$._id",
+        "var": "taskId"
+      }
+    ]
+  },
+  "startedAt": "2026-04-27T10:36:31.809Z",
+  "k6Summary": {
+    "root_group": {
+      "name": "",
+      "path": "",
+      "id": "d41d8cd98f00b204e9800998ecf8427e",
+      "groups": {},
+      "checks": {
+        "status ok": {
+          "passes": 0,
+          "fails": 10858,
+          "name": "status ok",
+          "path": "::status ok",
+          "id": "017d7c5e080cbf543220d509d2bfff42"
+        }
+      }
+    },
+    "metrics": {
+      "http_req_tls_handshaking": {
+        "med": 0,
+        "max": 0,
+        "p(90)": 0,
+        "p(95)": 0,
+        "avg": 0,
+        "min": 0
+      },
+      "http_req_connecting": {
+        "max": 1042.566413,
+        "p(90)": 0,
+        "p(95)": 0.10848264999999989,
+        "avg": 21.14517146095045,
+        "min": 0,
+        "med": 0
+      },
+      "http_req_failed": {
+        "passes": 10858,
+        "fails": 0,
+        "value": 1
+      },
+      "vus": {
+        "value": 1,
+        "min": 1,
+        "max": 1000
+      },
+      "http_req_waiting": {
+        "max": 208.391599,
+        "p(90)": 1.8941612000000099,
+        "p(95)": 55.79365949999997,
+        "avg": 5.724952803831297,
+        "min": 0.077285,
+        "med": 0.471033
+      },
+      "api_req_duration": {
+        "min": 0.103354,
+        "med": 0.578273,
+        "max": 208.481022,
+        "p(90)": 2.366763400000014,
+        "p(95)": 55.863304049999975,
+        "avg": 5.918119557929653
+      },
+      "api_errors": {
+        "rate": 284.64600478673555,
+        "count": 10858
+      },
+      "vus_max": {
+        "value": 1000,
+        "min": 1000,
+        "max": 1000
+      },
+      "checks": {
+        "passes": 0,
+        "fails": 10858,
+        "value": 0
+      },
+      "data_received": {
+        "count": 1552694,
+        "rate": 40704.37868450319
+      },
+      "api_data_sent": {
+        "count": 2578191,
+        "rate": 67588.11638673038
+      },
+      "http_req_duration": {
+        "med": 0.578273,
+        "max": 208.481022,
+        "p(90)": 2.366763400000014,
+        "p(95)": 55.863304049999975,
+        "avg": 5.918119557929653,
+        "min": 0.103354
+      },
+      "http_reqs": {
+        "count": 10858,
+        "rate": 284.64600478673555
+      },
+      "http_req_blocked": {
+        "med": 0.0089455,
+        "max": 1042.609089,
+        "p(90)": 0.029829100000000348,
+        "p(95)": 0.16103895,
+        "avg": 21.16013478817464,
+        "min": 0.002091
+      },
+      "data_sent": {
+        "count": 4168888,
+        "rate": 109288.75608798715
+      },
+      "http_req_sending": {
+        "p(95)": 0.089499,
+        "avg": 0.13339306207404675,
+        "min": 0.005393,
+        "med": 0.0343135,
+        "max": 39.521844,
+        "p(90)": 0.057729100000000005
+      },
+      "iteration_duration": {
+        "avg": 6068.242688887626,
+        "min": 3182.835453,
+        "med": 6075.1456,
+        "max": 9533.308969,
+        "p(90)": 7388.7142542,
+        "p(95)": 7749.8024088
+      },
+      "iterations": {
+        "count": 5429,
+        "rate": 142.32300239336777
+      },
+      "http_req_receiving": {
+        "avg": 0.05977369202431395,
+        "min": 0.005204,
+        "med": 0.054528499999999994,
+        "max": 3.270953,
+        "p(90)": 0.09699050000000002,
+        "p(95)": 0.11036864999999998
+      },
+      "api_data_received": {
+        "count": 0,
+        "rate": 0
+      },
+      "api_reqs": {
+        "count": 10858,
+        "rate": 284.64600478673555
+      }
+    }
+  },
+  "perRequestReport": [
+    {
+      "api": "flow_default :: Onboarding",
+      "count": 5429,
+      "errorCount": 5429,
+      "errorPct": 100,
+      "avgMs": 12.151533038400038,
+      "minMs": 0.103609,
+      "maxMs": 208.481022,
+      "p50Ms": 0.631128,
+      "p90Ms": 57.019741,
+      "p95Ms": 95.195303,
+      "p99Ms": 111.047134,
+      "rps": 180.96666666666667,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 41240.933333333334
+    },
+    {
+      "api": "flow_default :: Verify Email",
+      "count": 5429,
+      "errorCount": 5429,
+      "errorPct": 100,
+      "avgMs": 0.7002553936000036,
+      "minMs": 0.103354,
+      "maxMs": 12.685846,
+      "p50Ms": 0.562211,
+      "p90Ms": 0.950105,
+      "p95Ms": 1.172404,
+      "p99Ms": 2.625436,
+      "rps": 180.96666666666667,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 44698.76666666667
+    }
+  ],
+  "finishedAt": "2026-04-27T10:37:15.937Z"
+}

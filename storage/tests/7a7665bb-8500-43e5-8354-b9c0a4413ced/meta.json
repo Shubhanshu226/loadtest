@@ -1,0 +1,205 @@
+{
+  "id": "7a7665bb-8500-43e5-8354-b9c0a4413ced",
+  "status": "completed",
+  "createdAt": "2026-04-27T12:51:19.991Z",
+  "vus": 10,
+  "duration": "10s",
+  "collectionName": "Auth MS - Account + Session Flow",
+  "config": {
+    "extractions": [
+      {
+        "match": "/Auth :: Login/i",
+        "jsonPath": "$.accessToken",
+        "var": "accessToken"
+      },
+      {
+        "match": "/Tasks :: Create/i",
+        "jsonPath": "$._id",
+        "var": "taskId"
+      }
+    ]
+  },
+  "startedAt": "2026-04-27T12:51:20.872Z",
+  "k6Summary": {
+    "metrics": {
+      "iteration_duration": {
+        "avg": 6367.296020809522,
+        "min": 3864.139,
+        "med": 6310.930722,
+        "max": 8119.90836,
+        "p(90)": 7516.569581,
+        "p(95)": 8066.323043
+      },
+      "http_req_waiting": {
+        "avg": 195.69682735714292,
+        "min": 2.561659,
+        "med": 39.605812,
+        "max": 772.349809,
+        "p(90)": 691.9119638000001,
+        "p(95)": 765.3289366499997
+      },
+      "vus_max": {
+        "value": 10,
+        "min": 10,
+        "max": 10
+      },
+      "api_reqs": {
+        "count": 42,
+        "rate": 2.653845176647866
+      },
+      "data_received": {
+        "count": 37130,
+        "rate": 2346.1255097365542
+      },
+      "http_req_receiving": {
+        "avg": 0.08559085714285716,
+        "min": 0.037173,
+        "med": 0.0826695,
+        "max": 0.262899,
+        "p(90)": 0.1134265,
+        "p(95)": 0.13350225
+      },
+      "api_data_received": {
+        "count": 22892,
+        "rate": 1446.4719948529275
+      },
+      "iterations": {
+        "count": 21,
+        "rate": 1.326922588323933
+      },
+      "http_req_failed": {
+        "passes": 0,
+        "fails": 42,
+        "value": 0
+      },
+      "checks": {
+        "passes": 42,
+        "fails": 0,
+        "value": 1
+      },
+      "vus": {
+        "value": 2,
+        "min": 2,
+        "max": 10
+      },
+      "http_reqs": {
+        "rate": 2.653845176647866,
+        "count": 42
+      },
+      "http_req_blocked": {
+        "max": 0.731345,
+        "p(90)": 0.4375034,
+        "p(95)": 0.6528451999999992,
+        "avg": 0.12653142857142863,
+        "min": 0.003985,
+        "med": 0.012059
+      },
+      "http_req_tls_handshaking": {
+        "p(90)": 0,
+        "p(95)": 0,
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "max": 0
+      },
+      "data_sent": {
+        "count": 15332,
+        "rate": 968.7798630563116
+      },
+      "http_req_duration": {
+        "p(90)": 692.1492033,
+        "p(95)": 765.4464924499997,
+        "avg": 195.84427938095237,
+        "min": 2.638984,
+        "med": 39.7091645,
+        "max": 772.471655
+      },
+      "http_req_duration{expected_response:true}": {
+        "avg": 195.84427938095237,
+        "min": 2.638984,
+        "med": 39.7091645,
+        "max": 772.471655,
+        "p(90)": 692.1492033,
+        "p(95)": 765.4464924499997
+      },
+      "http_req_connecting": {
+        "avg": 0.08728485714285715,
+        "min": 0,
+        "med": 0,
+        "max": 0.544562,
+        "p(90)": 0.367338,
+        "p(95)": 0.3866296999999999
+      },
+      "api_req_duration": {
+        "p(95)": 765.4464924499997,
+        "avg": 195.84427938095237,
+        "min": 2.638984,
+        "med": 39.7091645,
+        "max": 772.471655,
+        "p(90)": 692.1492033
+      },
+      "http_req_sending": {
+        "p(95)": 0.11943374999999999,
+        "avg": 0.06186116666666665,
+        "min": 0.019824,
+        "med": 0.051478499999999996,
+        "max": 0.145509,
+        "p(90)": 0.10772209999999999
+      },
+      "api_data_sent": {
+        "count": 8465,
+        "rate": 534.8761766743854
+      }
+    },
+    "root_group": {
+      "name": "",
+      "path": "",
+      "id": "d41d8cd98f00b204e9800998ecf8427e",
+      "groups": {},
+      "checks": {
+        "status ok": {
+          "name": "status ok",
+          "path": "::status ok",
+          "id": "017d7c5e080cbf543220d509d2bfff42",
+          "passes": 42,
+          "fails": 0
+        }
+      }
+    }
+  },
+  "perRequestReport": [
+    {
+      "api": "flow_default :: Login",
+      "count": 21,
+      "errorCount": 0,
+      "errorPct": 0,
+      "avgMs": 385.5730872380953,
+      "minMs": 70.171093,
+      "maxMs": 772.471655,
+      "p50Ms": 134.363401,
+      "p90Ms": 769.279701,
+      "p95Ms": 769.443843,
+      "p99Ms": 772.471655,
+      "rps": 2.1,
+      "bytesReceivedPerSec": 1953.2,
+      "bytesSentPerSec": 665.9
+    },
+    {
+      "api": "flow_default :: Current Session",
+      "count": 21,
+      "errorCount": 0,
+      "errorPct": 0,
+      "avgMs": 6.115471523809522,
+      "minMs": 2.638984,
+      "maxMs": 9.247236,
+      "p50Ms": 6.117601,
+      "p90Ms": 8.410781,
+      "p95Ms": 9.099894,
+      "p99Ms": 9.247236,
+      "rps": 2.1,
+      "bytesReceivedPerSec": 336,
+      "bytesSentPerSec": 180.6
+    }
+  ],
+  "finishedAt": "2026-04-27T12:51:37.327Z"
+}

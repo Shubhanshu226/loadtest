@@ -1,0 +1,36 @@
+{
+  "rows": [
+    {
+      "api": "flow_default :: Login",
+      "count": 20,
+      "errorCount": 0,
+      "errorPct": 0,
+      "avgMs": 313.83090345,
+      "minMs": 72.81918,
+      "maxMs": 647.708427,
+      "p50Ms": 310.521957,
+      "p90Ms": 646.788823,
+      "p95Ms": 647.708427,
+      "p99Ms": 647.708427,
+      "rps": 2,
+      "bytesReceivedPerSec": 1860.2,
+      "bytesSentPerSec": 634.2
+    },
+    {
+      "api": "flow_default :: Current Session",
+      "count": 20,
+      "errorCount": 0,
+      "errorPct": 0,
+      "avgMs": 6.20471735,
+      "minMs": 3.103265,
+      "maxMs": 8.809114,
+      "p50Ms": 6.538313,
+      "p90Ms": 8.1942,
+      "p95Ms": 8.809114,
+      "p99Ms": 8.809114,
+      "rps": 2,
+      "bytesReceivedPerSec": 320,
+      "bytesSentPerSec": 172
+    }
+  ]
+}

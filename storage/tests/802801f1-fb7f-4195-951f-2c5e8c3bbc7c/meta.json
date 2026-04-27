@@ -1,0 +1,11 @@
+{
+  "id": "802801f1-fb7f-4195-951f-2c5e8c3bbc7c",
+  "status": "failed",
+  "createdAt": "2026-04-23T13:15:12.413Z",
+  "vus": 1000,
+  "duration": "30s",
+  "collectionName": "Todo App (NestJS) - Load Test Flow",
+  "startedAt": "2026-04-23T13:17:29.473Z",
+  "finishedAt": "2026-04-23T13:17:29.752Z",
+  "error": "k6 exited with code 107"
+}

@@ -1,0 +1,126 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /home/user/Desktop/simple load testing/backend/storage/tests/6d3007ff-a980-4878-8dd1-f3e58e2c0d36/script.js
+        output: json (/home/user/Desktop/simple load testing/backend/storage/tests/6d3007ff-a980-4878-8dd1-f3e58e2c0d36/metrics.ndjson)
+
+     scenarios: (100.00%) 1 scenario, 100 max VUs, 40s max duration (incl. graceful stop):
+              * default: 100 looping VUs for 10s (gracefulStop: 30s)
+
+
+running (01.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [  10% ] 100 VUs  01.0s/10s
+
+running (02.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [  20% ] 100 VUs  02.0s/10s
+
+running (03.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [  30% ] 100 VUs  03.0s/10s
+
+running (04.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [  40% ] 100 VUs  04.0s/10s
+
+running (05.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [  50% ] 100 VUs  05.0s/10s
+
+running (06.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [  60% ] 100 VUs  06.0s/10s
+
+running (07.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [  70% ] 100 VUs  07.0s/10s
+
+running (08.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [  80% ] 100 VUs  08.0s/10s
+
+running (09.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [  90% ] 100 VUs  09.0s/10s
+
+running (10.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default   [ 100% ] 100 VUs  10.0s/10s
+
+running (11.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (12.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (13.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (14.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (15.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (16.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (17.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (18.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (19.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (20.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (21.0s), 100/100 VUs, 0 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (22.0s), 098/100 VUs, 2 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (23.0s), 098/100 VUs, 2 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (24.0s), 094/100 VUs, 6 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (25.0s), 085/100 VUs, 15 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (26.0s), 080/100 VUs, 20 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (27.0s), 071/100 VUs, 29 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (28.0s), 065/100 VUs, 35 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (29.0s), 058/100 VUs, 42 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (30.0s), 050/100 VUs, 50 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (31.0s), 039/100 VUs, 61 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (32.0s), 034/100 VUs, 66 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (33.0s), 027/100 VUs, 73 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (34.0s), 016/100 VUs, 84 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (35.0s), 007/100 VUs, 93 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (36.0s), 003/100 VUs, 97 complete and 0 interrupted iterations
+default ↓ [ 100% ] 100 VUs  10s
+
+running (36.6s), 000/100 VUs, 100 complete and 0 interrupted iterations
+default ✓ [ 100% ] 100 VUs  10s

@@ -1,0 +1,36 @@
+{
+  "rows": [
+    {
+      "api": "flow_default :: 1. Onboarding (Send OTP)",
+      "count": 20,
+      "errorCount": 0,
+      "errorPct": 0,
+      "avgMs": 11.9477351,
+      "minMs": 3.175071,
+      "maxMs": 26.977521,
+      "p50Ms": 7.943374,
+      "p90Ms": 25.872116,
+      "p95Ms": 26.977521,
+      "p99Ms": 26.977521,
+      "rps": 2,
+      "bytesReceivedPerSec": 312,
+      "bytesSentPerSec": 458
+    },
+    {
+      "api": "flow_default :: 2. Verify Email (OTP)",
+      "count": 20,
+      "errorCount": 0,
+      "errorPct": 0,
+      "avgMs": 6.3262253,
+      "minMs": 3.337181,
+      "maxMs": 9.43898,
+      "p50Ms": 6.559552,
+      "p90Ms": 8.125878,
+      "p95Ms": 9.43898,
+      "p99Ms": 9.43898,
+      "rps": 2,
+      "bytesReceivedPerSec": 688,
+      "bytesSentPerSec": 454
+    }
+  ]
+}

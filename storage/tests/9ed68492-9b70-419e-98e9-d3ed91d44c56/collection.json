@@ -1,0 +1,115 @@
+{
+  "info": {
+    "name": "Auth MS - Account Resolver",
+    "_postman_id": "0f6fb61a-95d2-4db0-9bc7-03d30832e401",
+    "description": "GraphQL requests for onboarding, verifyEmail, and login in auth-ms.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "graphqlPath",
+      "value": "/graphql"
+    },
+    {
+      "key": "basicAuthToken",
+      "value": "REPLACE_WITH_BASE64_USERNAME_PASSWORD"
+    },
+    {
+      "key": "email",
+      "value": "user@example.com"
+    },
+    {
+      "key": "password",
+      "value": "Password@123"
+    },
+    {
+      "key": "otp",
+      "value": "123456"
+    },
+    {
+      "key": "guestId",
+      "value": ""
+    },
+    {
+      "key": "mfaToken",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Onboarding",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic {{basicAuthToken}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"query\": \"mutation Onboarding($input: OnboardingInput!) { onboarding(input: $input) { success mfaToken } }\",\n  \"variables\": {\n    \"input\": {\n      \"email\": \"{{email}}\",\n      \"password\": \"{{password}}\"\n    }\n  }\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}{{graphqlPath}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "{{graphqlPath}}"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "const token = json?.data?.onboarding?.mfaToken;",
+              "if (token) pm.collectionVariables.set('mfaToken', token);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Verify Email",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{mfaToken}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"query\": \"mutation VerifyEmail($input: VerifyOnboardingInput!) { verifyEmail(input: $input) { success nextStep authToken refreshToken userId id xApiKey } }\",\n  \"variables\": {\n    \"input\": {\n      \"otp\": \"00000\",\n      \"guestId\": \"{{guestId}}\"\n    }\n  }\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}{{graphqlPath}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "{{graphqlPath}}"
+          ]
+        }
+      }
+    }
+  ]
+}

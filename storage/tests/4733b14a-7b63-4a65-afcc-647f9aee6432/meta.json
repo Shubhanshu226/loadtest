@@ -1,0 +1,53 @@
+{
+  "id": "4733b14a-7b63-4a65-afcc-647f9aee6432",
+  "status": "completed",
+  "createdAt": "2026-04-23T19:52:39.191Z",
+  "vus": 10,
+  "duration": "30s",
+  "collectionName": "Todo App (NestJS) - Load Test Flow",
+  "config": {
+    "extractions": [
+      {
+        "match": "/Auth :: Login/i",
+        "jsonPath": "$.accessToken",
+        "var": "accessToken"
+      },
+      {
+        "match": "/Tasks :: Create/i",
+        "jsonPath": "$._id",
+        "var": "taskId"
+      }
+    ]
+  },
+  "startedAt": "2026-04-23T19:52:42.502Z",
+  "k6Summary": {
+    "root_group": {
+      "id": "d41d8cd98f00b204e9800998ecf8427e",
+      "groups": {},
+      "checks": {},
+      "name": "",
+      "path": ""
+    },
+    "metrics": {
+      "vus_max": {
+        "value": 10,
+        "min": 10,
+        "max": 10
+      },
+      "data_sent": {
+        "count": 2071,
+        "rate": 34.5157522425683
+      },
+      "data_received": {
+        "count": 0,
+        "rate": 0
+      },
+      "vus": {
+        "min": 10,
+        "max": 10,
+        "value": 10
+      }
+    }
+  },
+  "finishedAt": "2026-04-23T19:53:43.263Z"
+}

@@ -1,0 +1,108 @@
+{
+  "info": {
+    "name": "Auth MS - Login & Current Session",
+    "_postman_id": "92ab78bf-a9c1-4f7b-bcce-cc6f931fd4cf",
+    "description": "Postman collection for GraphQL login and currentSession in auth-ms.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3009"
+    },
+    {
+      "key": "graphqlPath",
+      "value": "/graphql"
+    },
+    {
+      "key": "basicAuthToken",
+      "value": "REPLACE_WITH_BASE64_USERNAME_PASSWORD"
+    },
+    {
+      "key": "email",
+      "value": "user@example.com"
+    },
+    {
+      "key": "password",
+      "value": "Password@123"
+    },
+    {
+      "key": "authToken",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic {{basicAuthToken}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"query\": \"mutation Login($input: LoginInput!) { login(input: $input) { nextStep id userId email name authToken accessToken refreshToken mfaToken qrUrl platform xApiKey } }\",\n  \"variables\": {\n    \"input\": {\n      \"email\": \"{{email}}\",\n      \"password\": \"{{password}}\",\n      \"userType\": \"User\"\n    }\n  }\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}{{graphqlPath}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "{{graphqlPath}}"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "const login = json?.data?.login || {};",
+              "const token = login.authToken || login.accessToken || '';",
+              "if (token) pm.collectionVariables.set('authToken', token);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Current Session",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{authToken}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"query\": \"query CurrentSession { currentSession { result } }\",\n  \"variables\": {}\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}{{graphqlPath}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "{{graphqlPath}}"
+          ]
+        }
+      }
+    }
+  ]
+}

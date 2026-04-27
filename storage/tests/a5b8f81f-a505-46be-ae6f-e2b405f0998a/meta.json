@@ -1,0 +1,244 @@
+{
+  "id": "a5b8f81f-a505-46be-ae6f-e2b405f0998a",
+  "status": "completed",
+  "createdAt": "2026-04-24T12:00:45.847Z",
+  "vus": 1000,
+  "duration": "30s",
+  "collectionName": "Todo App (NestJS) - Load Test Flow",
+  "config": {
+    "extractions": [
+      {
+        "match": "/Auth :: Login/i",
+        "jsonPath": "$.accessToken",
+        "var": "accessToken"
+      },
+      {
+        "match": "/Tasks :: Create/i",
+        "jsonPath": "$._id",
+        "var": "taskId"
+      }
+    ]
+  },
+  "startedAt": "2026-04-24T12:01:14.221Z",
+  "k6Summary": {
+    "metrics": {
+      "data_sent": {
+        "count": 0,
+        "rate": 0
+      },
+      "data_received": {
+        "count": 0,
+        "rate": 0
+      },
+      "iteration_duration": {
+        "p(90)": 13848.7873057,
+        "p(95)": 14379.457612749999,
+        "avg": 12009.010738469686,
+        "min": 7552.76337,
+        "med": 11972.7538455,
+        "max": 16270.081133
+      },
+      "api_errors": {
+        "count": 15020,
+        "rate": 341.67073227749336
+      },
+      "api_data_received": {
+        "count": 0,
+        "rate": 0
+      },
+      "api_data_sent": {
+        "count": 522054,
+        "rate": 11875.537447962352
+      },
+      "vus": {
+        "min": 1,
+        "max": 1000,
+        "value": 1
+      },
+      "http_req_tls_handshaking": {
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "max": 0,
+        "p(90)": 0,
+        "p(95)": 0
+      },
+      "http_req_receiving": {
+        "p(90)": 0,
+        "p(95)": 0,
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "max": 0
+      },
+      "http_req_sending": {
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "max": 0,
+        "p(90)": 0,
+        "p(95)": 0
+      },
+      "http_req_failed": {
+        "passes": 15020,
+        "fails": 0,
+        "value": 1
+      },
+      "checks": {
+        "passes": 0,
+        "fails": 15020,
+        "value": 0
+      },
+      "http_req_duration": {
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "max": 0,
+        "p(90)": 0,
+        "p(95)": 0
+      },
+      "api_req_duration": {
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "max": 0,
+        "p(90)": 0,
+        "p(95)": 0
+      },
+      "api_reqs": {
+        "count": 15020,
+        "rate": 341.67073227749336
+      },
+      "http_req_connecting": {
+        "p(90)": 0,
+        "p(95)": 0,
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "max": 0
+      },
+      "iterations": {
+        "count": 3004,
+        "rate": 68.33414645549867
+      },
+      "http_req_waiting": {
+        "max": 0,
+        "p(90)": 0,
+        "p(95)": 0,
+        "avg": 0,
+        "min": 0,
+        "med": 0
+      },
+      "vus_max": {
+        "value": 1000,
+        "min": 1000,
+        "max": 1000
+      },
+      "http_req_blocked": {
+        "p(95)": 0,
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "max": 0,
+        "p(90)": 0
+      },
+      "http_reqs": {
+        "count": 15020,
+        "rate": 341.67073227749336
+      }
+    },
+    "root_group": {
+      "groups": {},
+      "checks": {
+        "status ok": {
+          "passes": 0,
+          "fails": 15020,
+          "name": "status ok",
+          "path": "::status ok",
+          "id": "017d7c5e080cbf543220d509d2bfff42"
+        }
+      },
+      "name": "",
+      "path": "",
+      "id": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+  },
+  "perRequestReport": [
+    {
+      "api": "Auth :: Register (optional per iteration)",
+      "count": 3004,
+      "errorCount": 3004,
+      "errorPct": 100,
+      "avgMs": 0,
+      "minMs": 0,
+      "p50Ms": 0,
+      "p90Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "rps": 100.13333333333334,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 7299.033333333334
+    },
+    {
+      "api": "Auth :: Login (sets accessToken)",
+      "count": 3004,
+      "errorCount": 3004,
+      "errorPct": 100,
+      "avgMs": 0,
+      "minMs": 0,
+      "p50Ms": 0,
+      "p90Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "rps": 100.13333333333334,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 7299.033333333334
+    },
+    {
+      "api": "Tasks :: List",
+      "count": 3004,
+      "errorCount": 3004,
+      "errorPct": 100,
+      "avgMs": 0,
+      "minMs": 0,
+      "p50Ms": 0,
+      "p90Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "rps": 100.13333333333334,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 0
+    },
+    {
+      "api": "Tasks :: Create (sets taskId)",
+      "count": 3004,
+      "errorCount": 3004,
+      "errorPct": 100,
+      "avgMs": 0,
+      "minMs": 0,
+      "p50Ms": 0,
+      "p90Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "rps": 100.13333333333334,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 2803.733333333333
+    },
+    {
+      "api": "Tasks :: Toggle Done",
+      "count": 3004,
+      "errorCount": 3004,
+      "errorPct": 100,
+      "avgMs": 0,
+      "minMs": 0,
+      "p50Ms": 0,
+      "p90Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "rps": 100.13333333333334,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 0
+    }
+  ],
+  "finishedAt": "2026-04-24T12:02:00.120Z"
+}

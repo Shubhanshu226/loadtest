@@ -1,0 +1,36 @@
+{
+  "rows": [
+    {
+      "api": "flow_default :: Onboarding",
+      "count": 20,
+      "errorCount": 20,
+      "errorPct": 100,
+      "avgMs": 1.1469159,
+      "minMs": 0.505997,
+      "maxMs": 1.815159,
+      "p50Ms": 1.180716,
+      "p90Ms": 1.715043,
+      "p95Ms": 1.815159,
+      "p99Ms": 1.815159,
+      "rps": 2,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 452.2
+    },
+    {
+      "api": "flow_default :: Verify Email",
+      "count": 20,
+      "errorCount": 20,
+      "errorPct": 100,
+      "avgMs": 0.8414101500000001,
+      "minMs": 0.339817,
+      "maxMs": 1.240818,
+      "p50Ms": 1.108151,
+      "p90Ms": 1.239913,
+      "p95Ms": 1.240818,
+      "p99Ms": 1.240818,
+      "rps": 2,
+      "bytesReceivedPerSec": 0,
+      "bytesSentPerSec": 494
+    }
+  ]
+}

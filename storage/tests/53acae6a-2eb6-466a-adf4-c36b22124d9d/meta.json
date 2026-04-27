@@ -1,0 +1,151 @@
+{
+  "id": "53acae6a-2eb6-466a-adf4-c36b22124d9d",
+  "status": "completed",
+  "createdAt": "2026-04-23T19:51:58.776Z",
+  "vus": 1000,
+  "duration": "30s",
+  "collectionName": "Todo App (NestJS) - Load Test Flow",
+  "config": {
+    "extractions": [
+      {
+        "match": "/Auth :: Login/i",
+        "jsonPath": "$.accessToken",
+        "var": "accessToken"
+      },
+      {
+        "match": "/Tasks :: Create/i",
+        "jsonPath": "$._id",
+        "var": "taskId"
+      }
+    ]
+  },
+  "startedAt": "2026-04-23T19:52:01.412Z",
+  "k6Summary": {
+    "metrics": {
+      "vus_max": {
+        "value": 1000,
+        "min": 1000,
+        "max": 1000
+      },
+      "http_reqs": {
+        "count": 916,
+        "rate": 15.260153666908305
+      },
+      "http_req_waiting": {
+        "avg": 18333.185233636454,
+        "min": 3.576895,
+        "med": 7825.7424085,
+        "max": 59805.939156,
+        "p(90)": 49896.147055,
+        "p(95)": 54778.58545425
+      },
+      "iterations": {
+        "count": 109,
+        "rate": 1.8158916481364686
+      },
+      "data_received": {
+        "count": 395440,
+        "rate": 6587.854984762249
+      },
+      "http_req_blocked": {
+        "avg": 14.496948600436685,
+        "min": 0.004834,
+        "med": 13.4495405,
+        "max": 76.339256,
+        "p(90)": 35.087475,
+        "p(95)": 55.331742000000006
+      },
+      "http_req_duration": {
+        "min": 3.718587,
+        "med": 7825.893933,
+        "max": 59806.385541,
+        "p(90)": 49898.0319825,
+        "p(95)": 54778.9180385,
+        "avg": 18334.518698112443
+      },
+      "http_req_connecting": {
+        "avg": 13.824172482532745,
+        "min": 0,
+        "med": 13.3849745,
+        "max": 69.988224,
+        "p(90)": 34.2647535,
+        "p(95)": 38.001433750000004
+      },
+      "http_req_receiving": {
+        "avg": 0.12455550655021837,
+        "min": 0.054133,
+        "med": 0.11291000000000001,
+        "max": 0.474785,
+        "p(90)": 0.17200100000000001,
+        "p(95)": 0.21139775
+      },
+      "checks": {
+        "passes": 436,
+        "fails": 480,
+        "value": 0.4759825327510917
+      },
+      "iteration_duration": {
+        "p(95)": 34051.988224,
+        "avg": 26752.360172403667,
+        "min": 18445.06132,
+        "med": 25200.409682,
+        "max": 53520.178168,
+        "p(90)": 33668.1464172
+      },
+      "data_sent": {
+        "count": 438826,
+        "rate": 7310.646498946183
+      },
+      "http_req_tls_handshaking": {
+        "p(90)": 0,
+        "p(95)": 0,
+        "avg": 0,
+        "min": 0,
+        "med": 0,
+        "max": 0
+      },
+      "http_req_sending": {
+        "avg": 1.2089089694323147,
+        "min": 0.018766,
+        "med": 0.2481485,
+        "max": 65.280714,
+        "p(90)": 2.4265499999999998,
+        "p(95)": 4.3192815
+      },
+      "http_req_failed": {
+        "passes": 480,
+        "fails": 436,
+        "value": 0.5240174672489083
+      },
+      "vus": {
+        "value": 968,
+        "min": 968,
+        "max": 1000
+      },
+      "http_req_duration{expected_response:true}": {
+        "med": 8.076894,
+        "max": 30035.82103,
+        "p(90)": 7893.5969475,
+        "p(95)": 10985.068161500001,
+        "avg": 2159.2792536169704,
+        "min": 3.718587
+      }
+    },
+    "root_group": {
+      "name": "",
+      "path": "",
+      "id": "d41d8cd98f00b204e9800998ecf8427e",
+      "groups": {},
+      "checks": {
+        "status ok": {
+          "name": "status ok",
+          "path": "::status ok",
+          "id": "017d7c5e080cbf543220d509d2bfff42",
+          "passes": 436,
+          "fails": 480
+        }
+      }
+    }
+  },
+  "finishedAt": "2026-04-23T19:53:02.168Z"
+}

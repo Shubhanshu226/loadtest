@@ -1,0 +1,23 @@
+{
+  "id": "62db4f3c-7606-4d27-88f5-5055816b5ab8",
+  "status": "running",
+  "createdAt": "2026-04-24T09:36:03.699Z",
+  "vus": 1000,
+  "duration": "30s",
+  "collectionName": "Todo App (NestJS) - Load Test Flow",
+  "config": {
+    "extractions": [
+      {
+        "match": "/Auth :: Login/i",
+        "jsonPath": "$.accessToken",
+        "var": "accessToken"
+      },
+      {
+        "match": "/Tasks :: Create/i",
+        "jsonPath": "$._id",
+        "var": "taskId"
+      }
+    ]
+  },
+  "startedAt": "2026-04-24T09:36:07.800Z"
+}

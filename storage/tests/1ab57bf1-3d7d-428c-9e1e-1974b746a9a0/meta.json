@@ -1,0 +1,8 @@
+{
+  "id": "1ab57bf1-3d7d-428c-9e1e-1974b746a9a0",
+  "status": "created",
+  "createdAt": "2026-04-23T11:44:26.671Z",
+  "vus": 1000,
+  "duration": "30s",
+  "collectionName": "Example Target API (Load Test)"
+}

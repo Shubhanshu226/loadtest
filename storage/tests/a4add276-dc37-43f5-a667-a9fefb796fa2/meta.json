@@ -1,0 +1,22 @@
+{
+  "id": "a4add276-dc37-43f5-a667-a9fefb796fa2",
+  "status": "created",
+  "createdAt": "2026-04-27T12:51:15.225Z",
+  "vus": 1000,
+  "duration": "30s",
+  "collectionName": "Auth MS - Account + Session Flow",
+  "config": {
+    "extractions": [
+      {
+        "match": "/Auth :: Login/i",
+        "jsonPath": "$.accessToken",
+        "var": "accessToken"
+      },
+      {
+        "match": "/Tasks :: Create/i",
+        "jsonPath": "$._id",
+        "var": "taskId"
+      }
+    ]
+  }
+}
