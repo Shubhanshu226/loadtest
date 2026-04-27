@@ -1,8 +1,0 @@
-{
-  "id": "e474192b-b307-4c85-bd8b-4e4ff2936808",
-  "status": "created",
-  "createdAt": "2026-04-23T12:43:38.379Z",
-  "vus": 1000,
-  "duration": "30s",
-  "collectionName": "Example Target API (Todo App + Utilities)"
-}

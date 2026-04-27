@@ -1,8 +1,0 @@
-{
-  "id": "197d4e93-e334-4e94-9b26-5472c135ff9d",
-  "status": "created",
-  "createdAt": "2026-04-23T15:37:48.696Z",
-  "vus": 1000,
-  "duration": "30s",
-  "collectionName": "Todo App (NestJS) - Load Test Flow"
-}
